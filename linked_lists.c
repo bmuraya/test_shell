@@ -11,6 +11,7 @@ void free_sp_list(sp_list **head)
 	if (head != NULL)
 	{
 		sp_list *curr, *temp;
+
 		for (curr = *head; curr != NULL; curr = curr->next)
 		{
 			temp = curr;
@@ -23,7 +24,6 @@ void free_sp_list(sp_list **head)
 /**
  * addVar_node - adds a variable at the end
  * of a r_var list.
- * 
  * @head: head of the linked list.
  * @lvar: length of the variable.
  * @val: value of the variable.

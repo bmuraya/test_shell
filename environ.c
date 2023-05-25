@@ -20,8 +20,7 @@ int comp_env_var(const char *name_environ, const char *name)
 	return (i + 1);
 }
 /**
- * _getenv - get an environment variable
- * 
+ * _getenv - get an environment variable 
  * @name: name of the environment variable
  * @_environ: environment variable
  * Return: value of the environment variable if is found.
@@ -51,15 +50,13 @@ char *_getenv(const char *name, char **_environ)
 	return (ptr_env + mov);
 }
 /**
- * _env - prints the evironment variables
- * 
+ * _env - prints the evironment variables 
  * @shell_data: data relevant.
  * Return: 1 on success.
  */
 int _env(data_shell *shell_data)
 {
 	int i, j;
-	
 	for (i = 0; shell_data->_environ[i]; i++)
 	{
 
@@ -74,7 +71,6 @@ int _env(data_shell *shell_data)
 }
 /**
  * copy_info - copies info to create
- * 
  * a new env or alias
  * @name: name (env or alias)
  * @value: value (env or alias)

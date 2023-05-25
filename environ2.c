@@ -2,7 +2,6 @@
 
 /**
  * set_env - sets an environment variable
- * 
  * @name: name of the environment variable
  * @value: value of the environment variable
  * @shell_data: data structure (environ)
@@ -29,14 +28,13 @@ void set_env(char *name, char *value, data_shell *shell_data)
 	}
 
 	shell_data->_environ = relc_mem_db(shell_data->_environ, i, sizeof(char *) * (i + 2));
-	shell_data->_environ[i] = copy_info(name, value);
+    shell_data->_environ[i] = copy_info(name, value);
 	shell_data->_environ[i + 1] = NULL;
 }
 
 /**
  * _setenv - compares env variables names
  * with the name passed.
- * 
  * @shell_data: data relevant (env name and env value)
  * Return: 1 on success.
  */
@@ -52,8 +50,7 @@ int _setenv(data_shell *shell_data)
 }
 
 /**
- * _unsetenv - deletes a environment variable
- * 
+ * _unsetenv - deletes a environment variable * 
  * @shell_data: data relevant (env name)
  * Return: 1 on success.
  */

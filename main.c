@@ -30,8 +30,7 @@ void data_free(data_shell *shell_data)
  */
 void data_set(data_shell *shell_data, char **av)
 {
-	unsigned int i;
-	i = 0;
+	unsigned int i = 0;
 
 	shell_data->av = av;
 	shell_data->input = NULL;

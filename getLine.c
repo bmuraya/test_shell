@@ -2,11 +2,11 @@
 
 
 /**
- *  exec_line - reads the input string.
+ *  read_line - reads the input string.
   * @i_eof: return value of getline function
  * Return: input string
  */
-char *exec_line(int *i_eof)
+char *read_line(int *i_eof)
 {
 	char *input = NULL;
 	size_t bufsize = 0;

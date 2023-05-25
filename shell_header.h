@@ -149,7 +149,7 @@ char *rep_var(char *input, data_shell *shell_data);
 /* getLine.c */
 void bring_line_var(char **lineptr, size_t *n, char *buffer, size_t j);
 ssize_t get_line_input(char **lineptr, size_t *n, FILE *stream);
-char *exec_line(int *i_eof);
+char *read_line(int *i_eof);
 
 /* exec_line_input.c */
 int exec_line(data_shell *shell_data);

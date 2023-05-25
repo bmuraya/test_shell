@@ -51,7 +51,7 @@ char *swap_char(char *input, int bool)
  * @input: input string
  * Return: no return
  */
-void add_nodes(separatorlist **head_s, line_list **head_l, char *input)
+void add_nodes(sp_list **head_s, line_list **head_l, char *input)
 {
 	int i;
 	char *line;
@@ -87,10 +87,10 @@ void add_nodes(separatorlist **head_s, line_list **head_l, char *input)
  * @shell_data: data structure
  * Return: no return
  */
-void go_next(separatorlist **list_s, line_list **list_l, data_shell *shell_data)
+void go_next(sp_list **list_s, line_list **list_l, data_shell *shell_data)
 {
 	int loop_sep;
-	separatorlist *ls_s;
+	sp_list *ls_s;
 	line_list *ls_l;
 
 	loop_sep = 1;
@@ -132,7 +132,7 @@ void go_next(separatorlist **list_s, line_list **list_l, data_shell *shell_data)
 int split_commands(data_shell *shell_data, char *input)
 {
 
-	separatorlist *head_s, *list_s;
+	sp_list *head_s, *list_s;
 	line_list *head_l, *list_l;
 	int loop;
 
@@ -160,7 +160,7 @@ int split_commands(data_shell *shell_data, char *input)
 			list_l = list_l->next;
 	}
 
-	free_separatorlist(&head_s);
+	free_sp_list(&head_s);
 	freeline_list(&head_l);
 
 	if (loop == 0)
@@ -197,7 +197,7 @@ char **split_line(char *input)
 		if (i == bsize)
 		{
 			bsize += TOK_BUFSIZE;
-			tokens = realloc_mem_blc_db(tokens, i, sizeof(char *) * bsize);
+			tokens = relc_mem_db(tokens, i, sizeof(char *) * bsize);
 			if (tokens == NULL)
 			{
 				write(STDERR_FILENO, ": allocation error\n", 18);

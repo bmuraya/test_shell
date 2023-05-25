@@ -2,6 +2,7 @@
 
 /**
  * _strcat- concatenate two strings
+ * 
  * @dest: char pointer the dest of the copied str
  * @src: const char pointer the source of str
  * Return: the dest
@@ -25,6 +26,7 @@ char *_strcat(char *dest, const char *src)
 }
 /**
  * *_strcpy- Copies the string pointed to by src.
+ * 
  * @dest: Type char pointer the dest of the copied str
  * @src: Type char pointer the source of str
  * Return: the dest.
@@ -69,7 +71,9 @@ int _strcmp(char *s1, char *s2)
  */
 char *_strchr(char *s, char c)
 {
+	
 	unsigned int i = 0;
+
 	for (; *(s + i) != '\0'; i++)
 		if (*(s + i) == c)
 			return (s + i);

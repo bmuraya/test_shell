@@ -9,7 +9,9 @@
 void data_free(data_shell *shell_data)
 {
 	unsigned int i;
+
 	i = 0;
+
 	while (shell_data->_environ[i])
 	{
 		free(shell_data->_environ[i]);
@@ -29,6 +31,7 @@ void data_free(data_shell *shell_data)
 void data_set(data_shell *shell_data, char **av)
 {
 	unsigned int i;
+	
 	i = 0;
 
 	shell_data->av = av;

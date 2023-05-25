@@ -78,7 +78,6 @@ int _env(data_shell *shell_data)
  */
 char *copy_info(char *name, char *value)
 {
-	
 	char *new;
 	int len_name, len_value, len;
 	

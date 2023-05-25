@@ -110,7 +110,7 @@ int _strspn(char *s, char *accept);
 /* memory.c */
 void _memorycopy(void *dstptr, const void *ptr, unsigned int size);
 void *realloc_mem_blc(void *ptr, unsigned int old_size, unsigned int new_size);
-char **relc_mem_db(char **ptr, unsigned int old_size, unsigned int new_size);
+char **relc_mem(char **ptr, unsigned int old_size, unsigned int new_size);
 
 /* string_mem.c */
 char *_strdup(const char *s);
